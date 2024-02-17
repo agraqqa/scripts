@@ -24,3 +24,15 @@ Usage example:
 ```fish
 source ~/git/agraqqa/scripts/add-ssh-keys/vroom-vroom.fish
 ```
+
+# moon-phase
+
+[moon-phase.bash](moon-phase.bash) is a bash script that returns the current moon phase as an emoji. 
+
+Useful for the terminal prompt customization in order to get sure that it is an appropriate time to run complex commands 🐺 🌝
+
+Example:
+
+```bash
+🌓 ~/git/agraqqa/scripts/ > ./dump_database.sh # Half moon is the best time to do that
+``` 
