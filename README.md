@@ -36,3 +36,15 @@ Example:
 ```bash
 🌓 ~/git/agraqqa/scripts/ > ./dump_database.sh # Half moon is the best time to do that
 ```
+
+# silence.bash
+
+[silence.bash](silence.bash) silences instance in Alertmanager
+
+Usage example:
+
+```bash
+./silence.bash jupiter:9873 +1H
+```
+
+`GRAFANA_URL`, `GRAFANA_TOKEN` and `ALERTMANAGER_UID` environment variables must be set. Default silence duration is 1 hour. External Alertmanager as datasource in Grafana is required (not the  built-in one)
