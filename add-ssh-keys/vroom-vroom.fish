@@ -16,7 +16,7 @@ set SSH_ASKPASS_CUSTORM_SCRIPT "$SCRIPT_PATH/$SSH_ASKPASS_CUSTOM_SCRIPT_NAME"
 set KEYS_ITEM "op://$OP_VAULT/ssh_keys_list/keys"
 
 # Reset ssh-agent before adding the keys
-set RESET_AGENT true
+set RESET_AGENT false
 
 # Check if SSH_ASKPASS_CUSTORM_SCRIPT exists
 if test ! -f $SSH_ASKPASS_CUSTORM_SCRIPT
@@ -61,6 +61,9 @@ if $RESET_AGENT
         exit 1
     end
 end
+
+set --export OP_VAULT $OP_VAULT
+set --export OP_ACCOUNT $OP_ACCOUNT
 
 set keys_added 0
 for key in $keys
